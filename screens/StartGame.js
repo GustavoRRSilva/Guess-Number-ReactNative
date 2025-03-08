@@ -5,7 +5,11 @@ function StartGame() {
   return (
     <View style={styles.bg}>
       <View style={styles.inputContainer}>
-        <TextInput />
+        <TextInput
+          maxLength={2}
+          style={styles.numberInput}
+          keyboardType="numeric"
+        />
         <PrimaryButton>Reset</PrimaryButton>
         <PrimaryButton>Confirm</PrimaryButton>
       </View>
@@ -26,6 +30,17 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowOffset: { width: 2, height: 2 },
     shadowRadius: 6,
+  },
+  numberInput: {
+    height: 50,
+    width: 50,
+    fontSize: 32,
+    borderBottomColor: "#ddb52f",
+    borderBottomWidth: 2,
+    color: "#ddb52f",
+    marginVertical: 8,
+    fontWeight: "bold",
+    textAlign: "center",
   },
 });
 export default StartGame;
