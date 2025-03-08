@@ -18,11 +18,12 @@ function PrimaryButton({ children }) {
 }
 const styles = StyleSheet.create({
   buttonOutContainer: {
-    borderRadius: 28,
+    backgroundColor: "#72063c",
+    overflow: "hidden",
     margin: 4,
+    borderRadius: 10,
   },
   buttonInnerContainer: {
-    backgroundColor: "#72063c",
     paddingVertical: 8,
     paddingHorizontal: 16,
     elevation: 2,

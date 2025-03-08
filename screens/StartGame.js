@@ -10,8 +10,14 @@ function StartGame() {
           style={styles.numberInput}
           keyboardType="numeric"
         />
-        <PrimaryButton>Reset</PrimaryButton>
-        <PrimaryButton>Confirm</PrimaryButton>
+        <View style={styles.buttonsContainer}>
+          <View style={styles.buttonContainer}>
+            <PrimaryButton>Reset</PrimaryButton>
+          </View>
+          <View style={styles.buttonContainer}>
+            <PrimaryButton>Confirm</PrimaryButton>
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -30,6 +36,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowOffset: { width: 2, height: 2 },
     shadowRadius: 6,
+    justifyContent: "center",
+    alignItems: "center",
   },
   numberInput: {
     height: 50,
@@ -41,6 +49,13 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     fontWeight: "bold",
     textAlign: "center",
+  },
+  buttonsContainer: {
+    flexDirection: "row",
+  },
+  buttonContainer: {
+    width: "45%",
+    borderRadius: 20,
   },
 });
 export default StartGame;
