@@ -24,7 +24,6 @@ function StartGame() {
 }
 
 const styles = StyleSheet.create({
-  bg: { backgroundColor: "#fff", flex: 1 },
   inputContainer: {
     marginTop: 100,
     marginHorizontal: 24,
