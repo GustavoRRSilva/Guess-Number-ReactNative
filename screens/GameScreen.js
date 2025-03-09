@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import { useState } from "react";
+import { Title } from "../components/Title";
 
 const GameScreen = () => {
   const [guessedValue, setGuessedValue] = useState(0);
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Opponent's Guess</Text>
+      <Title>Opponent's Guess</Title>
       <View>
         <Text>{guessedValue}</Text>
         <Text>Higher or lower?</Text>
