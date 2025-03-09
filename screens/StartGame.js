@@ -2,7 +2,7 @@ import { Alert, StyleSheet, TextInput, View } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import { useState } from "react";
 
-function StartGame() {
+function StartGame({ pickedNumber }) {
   const [enteredNumber, setEnteredNumber] = useState("");
 
   const numberInputHandler = (numberValue) => {
@@ -27,8 +27,7 @@ function StartGame() {
       enteredNumber <= 99 &&
       !isNaN(enteredNumberChangedToNumeric)
     ) {
-      //Alert.alert("Correct value!", "Thanks for give a correct number!");
-      return;
+      return pickedNumber(enteredNumber);
     }
     return Alert.alert(
       "Incorrect value!",
